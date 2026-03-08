@@ -1,9 +1,15 @@
-import Image from "next/image";
 
-export default function Home() {
+"use client"
+
+import React from 'react';
+import Link from 'next/link';
+
+const Page = () => {
   return (
-    <div className="Main">
-      <h1 className="Title">FileDB Downloader</h1>
+    <div>
+      <h2>Site Map</h2>
     </div>
   );
 }
+
+export default Page;
