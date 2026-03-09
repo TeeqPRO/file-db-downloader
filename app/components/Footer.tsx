@@ -2,8 +2,9 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-(--footer-bg) text-(--footer-text) py-12 mt-auto backdrop-blur-md">
-      <div className="container mx-auto px-4">
+    <footer className="relative mt-auto w-full border-t border-(--footer-border) bg-(--footer-bg) text-(--footer-text) backdrop-blur-2xl">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/20" />
+      <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 font-bold text-xl text-(--footer-heading) mb-4">

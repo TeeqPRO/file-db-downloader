@@ -17,7 +17,7 @@ const Page = () => {
             Find your file in seconds
           </h2>
           <div className="w-full">
-            <SearchBar placeholder='Type / to search for files...' filters='files' popup={true} />
+            <SearchBar placeholder='Type / to search for files...' filters='files' slash={true} />
           </div>
         </div>
         <GradientBackground />

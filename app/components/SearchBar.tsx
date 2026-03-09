@@ -1,17 +1,55 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useRef } from 'react'
 
 type SearchBarProps = {
     placeholder?: string;
     filters?: string;
     addbutton?: boolean;
-    popup?: boolean;
+    slash?: boolean;
+    shlash?: boolean;
 }
 
-const SearchBar = ({ placeholder, filters, addbutton, popup}: SearchBarProps) => {
+const SearchBar = ({ placeholder, filters, addbutton, slash, shlash }: SearchBarProps) => {
+    const inputRef = useRef<HTMLInputElement>(null)
+    const isSlashEnabled = slash;
+
+    useEffect(() => {
+        if (!isSlashEnabled) {
+            return
+        }
+
+        const handleSlashFocus = (event: KeyboardEvent) => {
+            if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) {
+                return
+            }
+
+            const activeElement = document.activeElement as HTMLElement | null
+            const isTypingInField =
+                activeElement instanceof HTMLInputElement ||
+                activeElement instanceof HTMLTextAreaElement ||
+                activeElement instanceof HTMLSelectElement ||
+                activeElement?.isContentEditable
+
+            if (isTypingInField) {
+                return
+            }
+
+            event.preventDefault()
+            inputRef.current?.focus()
+        }
+
+        window.addEventListener('keydown', handleSlashFocus)
+        return () => {
+            window.removeEventListener('keydown', handleSlashFocus)
+        }
+    }, [isSlashEnabled])
+
   return (
     <div className="relative flex flex-row w-full">
         <div className="relative w-full">
             <input 
+                                ref={inputRef}
                 type="text" 
                 placeholder={placeholder}
                 className="w-full px-12 py-2 border border-(--ui-border) rounded-full bg-(--glass-bg) backdrop-blur-md text-(--text-primary) placeholder:text-(--text-muted) focus:outline-none focus:ring-0 hover:bg-(--glass-bg-hover) focus:bg-(--glass-bg-hover) transition-colors"
