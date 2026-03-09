@@ -40,7 +40,6 @@ export default function GradientBackground() {
 
   const restartGradient = () => {
     destroyGradient();
-    // Wait one frame so new CSS variables from theme are applied before re-init.
     requestAnimationFrame(() => {
       initGradient();
     });
@@ -76,7 +75,8 @@ export default function GradientBackground() {
       />
       <canvas
         id="gradient-canvas"
-        className="fixed inset-0 w-full h-full -z-10"
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full pointer-events-none"
       />
     </>
   );

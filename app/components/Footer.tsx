@@ -35,9 +35,8 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-(--footer-border) pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-          <p>Made by github.com/TeeqPRO</p>
+          <p>Made by <a href="https://github.com/TeeqPRO" target="_blank" rel="noopener noreferrer">TeeqPRO</a></p>
           <div className="flex items-center gap-6">
-            <a href="">test</a>
             <ThemeToggle />
           </div>
         </div>

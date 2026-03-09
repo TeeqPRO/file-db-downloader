@@ -1,11 +1,27 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
+import GradientBackground from './components/GradientBackground';
+import SearchBar from './components/SearchBar';
 
 const Page = () => {
   return (
     <div>
-      Test
+      <div
+        className='relative isolate flex h-[70vh] w-full flex-col items-center justify-center overflow-hidden'>
+        <div className='relative z-10'>
+          <h1 className='text-6xl font-semibold mb-3'> 
+            FileDBDownloader
+          </h1>
+          <h2 className='text-3xl font-normal mb-5'>
+            Find your file in seconds
+          </h2>
+          <div className="w-full">
+            <SearchBar placeholder='Type / to search for files...' filters='files' popup={true} />
+          </div>
+        </div>
+        <GradientBackground />
+      </div>        
     </div>
   );
 }

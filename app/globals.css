@@ -11,10 +11,6 @@
 	--ui-surface-hover: color-mix(in srgb, #ffffff 82%, transparent);
 	--ui-border: color-mix(in srgb, #000000 50%, transparent);
 
-	--button-bg: #1b7e95;
-	--button-bg-hover: #145f72;
-	--button-text: #ffffff;
-
 	--footer-bg: color-mix(in srgb, #e5ecf0 88%, transparent);
 	--footer-text: #334155;
 	--footer-heading: #0f172a;
@@ -38,9 +34,6 @@
 	--ui-surface-hover: color-mix(in srgb, #1b2438 84%, transparent);
 	--ui-border: color-mix(in srgb, #ffffff 70%, transparent);
 
-	--button-bg: #2e9fbf;
-	--button-bg-hover: #4ab7d5;
-
 	--footer-bg: color-mix(in srgb, #040710 86%, transparent);
 	--footer-text: #99accb;
 	--footer-heading: #f3f7ff;
@@ -51,4 +44,10 @@
 	--gradient-color-3: #1a294d;
 	--gradient-color-4: #302348;
 	--gradient-color-5: #361d38;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-primary);
+	font-family: "Inter", sans-serif;
 }
