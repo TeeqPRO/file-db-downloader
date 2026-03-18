@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+	--page-bg: #f4f7f8;
+	--text-primary: #121826;
+	--text-muted: #4f5d74;
+	--glass-bg: rgb(255 255 255 / 30%);
+	--glass-bg-hover: rgb(255 255 255 / 38%);
+
+	--ui-surface: color-mix(in srgb, #ffffff 70%, transparent);
+	--ui-surface-hover: color-mix(in srgb, #ffffff 82%, transparent);
+	--ui-border: color-mix(in srgb, #000000 50%, transparent);
+
+	--component-bg: color-mix(in srgb, #e5ecf0 88%, transparent);
+	--component-border: color-mix(in srgb, #334155 28%, transparent);
+	--footer-text: #334155;
+	--footer-heading: #0f172a;
+
+	--gradient-color-1: #e5eff4;
+	--gradient-color-2: #93d4de;
+	--gradient-color-3: #6ba9c3;
+	--gradient-color-4: #8f8bc0;
+	--gradient-color-5: #96a5bd;
+}
+
+[data-theme="dark"] {
+	--page-bg: #06090f;
+	--text-primary: #eaf2ff;
+	--text-muted: #b0bdd3;
+	--glass-bg: rgb(11 20 35 / 30%);
+	--glass-bg-hover: rgb(11 20 35 / 38%);
+
+	--ui-surface: color-mix(in srgb, #0f1727 76%, transparent);
+	--ui-surface-hover: color-mix(in srgb, #1b2438 84%, transparent);
+	--ui-border: color-mix(in srgb, #ffffff 70%, transparent);
+
+	--component-bg: color-mix(in srgb, #040710 86%, transparent);
+	--footer-text: #99accb;
+	--footer-heading: #f3f7ff;
+	--footer-border: color-mix(in srgb, #95a8ca 24%, transparent);
+
+	--gradient-color-1: #05070d;
+	--gradient-color-2: #0b3040;
+	--gradient-color-3: #1a294d;
+	--gradient-color-4: #302348;
+	--gradient-color-5: #361d38;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-primary);
+	font-family: "Inter", sans-serif;
+}
