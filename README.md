@@ -1,4 +1,4 @@
-## Nie działało mi pushowanie i musiałem zrobic to force przez to nam usuneło commity i zmienilo w 1 jakby wszystkie pliki podmienił nie wiem o co chodzi, ale w historii je widać
+## Nie działało mi pushowanie i musiałem zrobic to force przez to nam usuneło commity i zmienilo w 1 jakby wszystkie pliki podmienił nie wiem o co chodzi, ale w activity je widać
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
